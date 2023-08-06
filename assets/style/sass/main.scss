@@ -1,0 +1,102 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+@import "global";
+
+/* main */
+main {
+    @include flex(column);
+    height: 100%;
+    width: 100%;
+    background-color: $cor-fundo;
+
+    section {
+        @include flex(column);
+        justify-content: space-around;
+        height: 70%;
+        width: 32%;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 3px solid rgb(151, 151, 151);
+
+        * {
+            color: #111;
+        }
+        
+        .search-container {
+            @include flex(row);
+            justify-content: space-around;
+            width: 70%;
+            height: auto;
+
+            input {
+                border: 1px solid rgb(203, 203, 203);
+                border-radius: 3px;
+                padding: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+
+                &:focus {
+                    border: 1px solid #3d3d3d;
+                }
+            }
+
+            button {
+                padding: 8px 12px;
+                border-radius: 3px;
+                background-color: $colorido;
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(75%);
+                }
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+
+        .data-container {
+            @include flex(column);
+            align-items: flex-start;
+            height: auto;
+            min-width: 65%;
+            max-width: 100%;
+
+            li {
+                font-size: 1.1rem;
+                font-weight: 600;
+
+                &::marker {
+                    color: transparent;
+                }
+            }
+
+            .err {
+                display: none;
+                color: #ff0000;
+            }
+        }
+    }
+}
+/* main */
+
+/* responsivo */
+@media screen and (max-width: 768px) {
+    main {
+        section {
+            width: 80%;
+            height: 65%;
+
+            .search-container {
+                width: 95%;
+            }
+
+            .data-container {
+                width: 95%;
+            }
+        }
+    }
+  }
+/* responsivo */
