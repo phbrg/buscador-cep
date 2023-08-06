@@ -1,4 +1,4 @@
-#🌎 Buscador de CEP
+# 🌎 Buscador de CEP
 - Projetinho basico usando de uma API [viacep](https://viacep.com.br)
 - codigo limpo e autoral
 - feito com o intuito unicamente de aplicar meus conhecimentos e aprimora-los
